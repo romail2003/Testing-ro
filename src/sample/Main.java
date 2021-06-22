@@ -17,6 +17,7 @@ public class Main extends Application {
 
         String s = "Hello there!";
         int x = (int)'H';
+        int q = 3;
     }
 
 
