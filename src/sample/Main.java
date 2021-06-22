@@ -1,27 +1,15 @@
 package sample;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-public class Main extends Application {
-
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
-
-        String s = "Hello there!";
-        int x = (int)'H';
-        int q = 3;
-    }
-
+public class Main {
 
     public static void main(String[] args) {
-        launch(args);
+        int a = 45;
+        int x = switch (a) {
+            case 1, 2, 3 -> 12;
+            case 5, 6, 45 -> 2;
+            default -> 69;
+        };
+
+        System.out.println(x);
     }
 }
